@@ -34,12 +34,12 @@ selected_status = st.selectbox(
 filtered_df = df[df["License Status"] == selected_status]
 
 type_counts = filtered_df["License Type"].value_counts().reset_index()
-type_counts.columns = ["License Type", "Count"]
+type_counts.columns = ["Type", "Count"]
 
 chart2 = alt.Chart(type_counts).mark_bar().encode(
     x="Count:Q",
-    y=alt.Y("Licnese Type:N", sort = "-x"),
-    tooltip=["License Type", "Count"]
+    y=alt.Y("Type:N", sort = "-x", title="License Type"),
+    tooltip=["Type", "Count"]
 )
 
 st.altair_chart(chart2, use_container_width=True)
