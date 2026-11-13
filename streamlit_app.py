@@ -40,3 +40,7 @@ chart2 = alt.Chart(type_counts).mark_bar().encode(
 )
 
 st.altair_chart(chart2, use_container_width=True)
+
+st.write("""
+This visualization shows the distribution of license statuses in the dataset. A horizontal bar chart was chosen to make comparisons between categories easier. The bars are sorted by count, allowing the most common statuses to be identified quickly. If more time were available, I would improve the chart by grouping less common statuses together to reduce visual clutter.
+""")
