@@ -21,3 +21,22 @@ chart1 = alt.Chart(status_counts).mark_bar().encode(
 )
 
 st.altair_chart(chart1, use_container_width=True)
+
+st.header("Visualization 2: License Types by Status")
+
+selected_status = st.selectbox(
+    "Select a License Status",
+    df["License Status"].unique()
+)
+filtered_df = df[df["License Status"] == selected_status]
+
+types_counts = filtered_df["License Type"].value_counts().reset_index()
+type_counts.columns = ["License Type", "Count"]
+
+chart2 = alt.Chart(type_counts).mark_bar().encode(
+    x="Count:Q",
+    y=alt.Y("Licnese Type:N", sort = "-x"),
+    tooltip=["License Type", "Count"]
+)
+
+st.altair_chart(chart2, use_container_width=True)
