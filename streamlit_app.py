@@ -46,3 +46,7 @@ st.altair_chart(chart2, use_container_width=True)
 st.write("""
 This visualization explores how license types are distributed within different license statuses. Users can select a status from the dropdown menu, and the chart updates to display the corresponding license types and their counts. This interaction makes it possible to compare different subsets of the dataset without displaying all the information at once. I chose a horizontal bar chart because the license type names are relatively long, and sorting the bars by count makes the most common categories easier to identify. The x-axis represents the number of licenses, while the y-axis represents license types. I used the same blue color as the first visualization to maintain consistency between the two charts. If I had more time, I would add an option to display only the top ten license types and improve the readability of longer labels.""")
 
+st.write("""
+Both visualizations use a different dataset from Homework #5.
+Neither the plots nor the analysis from Homework #5 were reused.
+""")
