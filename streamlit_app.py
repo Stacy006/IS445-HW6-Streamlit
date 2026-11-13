@@ -22,8 +22,7 @@ chart1 = alt.Chart(status_counts).mark_bar().encode(
 
 st.altair_chart(chart1, use_container_width=True)
 st.write("""
-This visualization shows the distribution of license statuses in the dataset. A horizontal bar chart was chosen to make comparisons between categories easier. The bars are sorted by count, allowing the most common statuses to be identified quickly. If more time were available, I would improve the chart by grouping less common statuses together to reduce visual clutter.
-""")
+This visualization shows the distribution of license statuses in the dataset. The most common status is "NOT RENEWED," followed by "ACTIVE," while the remaining statuses appear much less frequently. I chose a horizontal bar chart because it makes comparisons between different categories easier, especially when category names are relatively long. The x-axis uses a quantitative scale to represent the number of licenses, while the y-axis displays the categorical license statuses. I sorted the bars in descending order to highlight differences in frequency and used a consistent blue color to keep the chart simple and readable. If I had more time, I would group less common statuses into an "Other" category and improve the display of longer category labels.""")
 
 st.header("Visualization 2: License Types by Status")
 
@@ -45,6 +44,5 @@ chart2 = alt.Chart(type_counts).mark_bar().encode(
 st.altair_chart(chart2, use_container_width=True)
 
 st.write("""
-This visualization compares license types within a selected license status. A dropdown menu allows users to filter the data and explore different categories interactively. A horizontal bar chart was chosen to make category labels easier to read and compare. If more time were available, I would improve the visualization by handling missing values and adding more filtering options.
-""")
+This visualization explores how license types are distributed within different license statuses. Users can select a status from the dropdown menu, and the chart updates to display the corresponding license types and their counts. This interaction makes it possible to compare different subsets of the dataset without displaying all the information at once. I chose a horizontal bar chart because the license type names are relatively long, and sorting the bars by count makes the most common categories easier to identify. The x-axis represents the number of licenses, while the y-axis represents license types. I used the same blue color as the first visualization to maintain consistency between the two charts. If I had more time, I would add an option to display only the top ten license types and improve the readability of longer labels.""")
 
