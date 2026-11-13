@@ -21,6 +21,9 @@ chart1 = alt.Chart(status_counts).mark_bar().encode(
 )
 
 st.altair_chart(chart1, use_container_width=True)
+st.write("""
+This visualization shows the distribution of license statuses in the dataset. A horizontal bar chart was chosen to make comparisons between categories easier. The bars are sorted by count, allowing the most common statuses to be identified quickly. If more time were available, I would improve the chart by grouping less common statuses together to reduce visual clutter.
+""")
 
 st.header("Visualization 2: License Types by Status")
 
@@ -42,5 +45,6 @@ chart2 = alt.Chart(type_counts).mark_bar().encode(
 st.altair_chart(chart2, use_container_width=True)
 
 st.write("""
-This visualization shows the distribution of license statuses in the dataset. A horizontal bar chart was chosen to make comparisons between categories easier. The bars are sorted by count, allowing the most common statuses to be identified quickly. If more time were available, I would improve the chart by grouping less common statuses together to reduce visual clutter.
+This visualization compares license types within a selected license status. A dropdown menu allows users to filter the data and explore different categories interactively. A horizontal bar chart was chosen to make category labels easier to read and compare. If more time were available, I would improve the visualization by handling missing values and adding more filtering options.
 """)
+
