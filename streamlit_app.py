@@ -30,7 +30,7 @@ selected_status = st.selectbox(
 )
 filtered_df = df[df["License Status"] == selected_status]
 
-types_counts = filtered_df["License Type"].value_counts().reset_index()
+type_counts = filtered_df["License Type"].value_counts().reset_index()
 type_counts.columns = ["License Type", "Count"]
 
 chart2 = alt.Chart(type_counts).mark_bar().encode(
